@@ -1,0 +1,15 @@
+<div class="cl0">
+  <div class="cl1">
+    <h1>Vintage Vivid</h1>
+  <div class="cl2">
+    <img *ngIf="imageInBase64" [src]="imageInBase64" alt="Chosen Image"  />
+    <img *ngIf="processedColorImageBase64" [src]="processedColorImageBase64" alt="Chosen Image"  />
+    <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;" />
+  </div>
+  <div class="cl3">
+    <button mat-raised-button color="warn" (click)="onChoosingImage()">Choose Image</button>
+    <button mat-raised-button color="accent" (click)="onProcessImage()">Process Image</button>
+  </div>
+</div>
+
+
